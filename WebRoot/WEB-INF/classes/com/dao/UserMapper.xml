@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.UserMapper">
+	<resultMap type="User" id="user">
+		<id property="id" column="id" />
+		<result property="userRoleName"  column="roleName"/>
+	</resultMap>
+	
+	<!-- 添加用户 -->
+	<insert id="addUser" parameterType="User">
+		insert into smbms_user(userName,userCode,userPassword,gender,birthday,phone,address,userRole,creationDate,createdBy) 
+		values(#{userName},#{userCode},#{userPassword},#{gender},#{birthday},#{phone},#{address},#{userRole},#{creationDate},#{createdBy})
+	</insert>
+	
+	<!-- 删除用户 -->
+	<delete id="deleteUser" parameterType="int">
+		delete from smbms_user where id=#{id}
+	</delete>
+	
+	<!-- 修改用户 -->
+	<update id="modifyUser" parameterType="User">
+		update smbms_user set userName=#{userName},
+		<if test="userPassword != null and userPassword != ''">
+			userPassword = #{userPassword},
+		</if>
+		gender=#{gender},birthday=#{birthday},phone=#{phone},address=#{address},userRole=#{userRole},modifyBy=#{modifyBy},modifyDate=#{modifyDate} where id=#{id} 
+	</update>
+	
+	<!-- 根据id查询用户 -->
+	<select id="findByUserId" resultMap="user" parameterType="int">
+		select u.*, r.roleName from smbms_user u, smbms_role r where u.userRole = r.id and u.id=#{id}
+	</select>
+	
+	<!-- 根据用户名模糊查询用户 -->
+	<select id="findByUserName" resultMap="user" parameterType="User">
+		select u.*,r.roleName from smbms_user u, smbms_role r where userName like CONCAT ('%',#{userName},'%') and userRole=r.id
+	</select>
+	
+	<!-- 查询所有用户 -->
+	<select id="findUserAll" resultMap="user">
+		select u.*, r.roleName from smbms_user u, smbms_role r where u.userRole = r.id
+	</select>
+</mapper>
+
+
+

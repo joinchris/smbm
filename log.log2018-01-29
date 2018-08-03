@@ -1,0 +1,12 @@
+2018-1-29 13:58:29[ERROR](LogAspect.java:11) 前置通知： com.service.UserServiceImpl 的 findById 方法开始了。方法入参：[8]
+2018-1-29 13:58:29[ERROR](LogAspect.java:16) 后置通知：用 com.service.UserServiceImpl 的 findById 方法正常结束了。方法返回值：com.entity.User@4b990bd6
+2018-1-29 15:51:34[ERROR](LogAspect.java:11) 前置通知： com.service.UserServiceImpl 的 findById 方法开始了。方法入参：[8]
+2018-1-29 15:57:49[ERROR](LogAspect.java:11) 前置通知： com.service.UserServiceImpl 的 findById 方法开始了。方法入参：[8]
+2018-1-29 23:09:55[ERROR](LogAspect.java:11) 前置通知： com.service.UserServiceImpl 的 findById 方法开始了。方法入参：[8]
+2018-1-29 23:09:55[ERROR](LogAspect.java:16) 后置通知：用 com.service.UserServiceImpl 的 findById 方法正常结束了。方法返回值：com.entity.User@acc4ce9
+2018-1-29 23:19:58[ERROR](LogAspect.java:11) 前置通知： com.service.UserServiceImpl 的 findById 方法开始了。方法入参：[8]
+2018-1-29 23:19:58[ERROR](LogAspect.java:16) 后置通知：用 com.service.UserServiceImpl 的 findById 方法正常结束了。方法返回值：com.entity.User@4acd83a0
+2018-1-29 23:51:48[ERROR](LogAspect.java:21) 前置通知： com.service.UserServiceImpl 的 findById 方法开始了。方法入参：[8]
+2018-1-29 23:51:48[ERROR](LogAspect.java:27) 后置通知：用 com.service.UserServiceImpl 的 findById 方法正常结束了。方法返回值：com.entity.User@d5c5f5e
+2018-1-29 23:52:28[ERROR](LogAspect.java:21) 前置通知： com.service.UserServiceImpl 的 findById 方法开始了。方法入参：[8]
+2018-1-29 23:52:29[ERROR](LogAspect.java:27) 后置通知：用 com.service.UserServiceImpl 的 findById 方法正常结束了。方法返回值：com.entity.User@64126a63

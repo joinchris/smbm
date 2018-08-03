@@ -1,0 +1,7 @@
+把本文件夹的名字括号内容去掉，并放入项目的WebContent下的js文件夹中
+
+在要导入的jsp中外联： <script src="${ctx}/js/My97DatePicker/WdatePicker.js"></script>
+
+在要使用的标签中添加：class="Wdate" readonly onclick="WdatePicker();"
+如：
+<input type="text" name="birthday" id="birthday" class="Wdate" readonly onclick="WdatePicker();"/>
